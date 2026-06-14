@@ -1,10 +1,9 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useMotionValueEvent, useScroll } from "motion/react"
-
-import { ChanhDaiMark } from "./chanhdai-mark"
 
 const calcDistance = (el: HTMLElement) => {
   const rect = el.getBoundingClientRect()
@@ -13,7 +12,7 @@ const calcDistance = (el: HTMLElement) => {
   return scrollTop + rect.top + rect.height - headerHeight
 }
 
-function ChanhDaiMarkMotion() {
+function MarkMotion() {
   const { scrollY } = useScroll()
   const [visible, setVisible] = useState(false)
   const distanceRef = useRef(160)
@@ -39,8 +38,24 @@ function ChanhDaiMarkMotion() {
   }, [])
 
   return (
-    <div data-visible={visible} className="group/mark-motion flex">
-      <ChanhDaiMark className="-translate-y-1 opacity-0 transition-[opacity,translate] duration-300 group-data-[visible=true]/mark-motion:translate-y-0 group-data-[visible=true]/mark-motion:opacity-100" />
+    <div
+      data-visible={visible}
+      className="group/mark-motion relative size-8 shrink-0"
+    >
+      <Image
+        src="/images/icon-2.svg"
+        alt="Logo"
+        width={32}
+        height={32}
+        className="hidden -translate-y-1 opacity-0 transition-[opacity,translate] duration-300 group-data-[visible=true]/mark-motion:translate-y-0 group-data-[visible=true]/mark-motion:opacity-100 [html.light_&]:block"
+      />
+      <Image
+        src="/images/icon.svg"
+        alt="Logo"
+        width={32}
+        height={32}
+        className="hidden -translate-y-1 opacity-0 transition-[opacity,translate] duration-300 group-data-[visible=true]/mark-motion:translate-y-0 group-data-[visible=true]/mark-motion:opacity-100 [html.dark_&]:block"
+      />
     </div>
   )
 }
@@ -48,5 +63,24 @@ function ChanhDaiMarkMotion() {
 export function SiteHeaderMark() {
   const pathname = usePathname()
   const isHome = ["/", "/index"].includes(pathname)
-  return isHome ? <ChanhDaiMarkMotion /> : <ChanhDaiMark />
+  return isHome ? (
+    <MarkMotion />
+  ) : (
+    <div className="relative size-8 shrink-0">
+      <Image
+        src="/images/icon-2.svg"
+        alt="Logo"
+        width={32}
+        height={32}
+        className="hidden [html.light_&]:block"
+      />
+      <Image
+        src="/images/icon.svg"
+        alt="Logo"
+        width={32}
+        height={32}
+        className="hidden [html.dark_&]:block"
+      />
+    </div>
+  )
 }
