@@ -32,12 +32,12 @@ export const USER: User = {
 - My stack spans 15+ technologies (Flutter, Next.js, React, TypeScript, NestJS, Docker, PostgreSQL, Prisma), and every system I build is designed to scale.
 - I design and build digital products that connect great user experiences with reliable engineering.
 `,
-  avatar: "/images/foto.jpg",
+  avatar: "/images/light.webp",
   avatarVariants: {
-    lightOff: "/images/foto.jpg",
-    lightOn: "/images/foto.jpg",
-    darkOff: "/images/foto.jpg",
-    darkOn: "/images/foto.jpg",
+    lightOff: "/images/light.webp",
+    lightOn: "/images/light.webp",
+    darkOff: "/images/dark.webp",
+    darkOn: "/images/dark.webp",
   },
   ogImage: "/images/foto.jpg",
   namePronunciationUrl: "",

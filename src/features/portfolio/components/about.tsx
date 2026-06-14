@@ -1,6 +1,5 @@
 import { Prose } from "@/components/ui/typography"
 import { Markdown } from "@/components/markdown"
-import { GitHubContributions } from "@/features/portfolio/components/github-contributions"
 import {
   Panel,
   PanelContent,
@@ -8,7 +7,6 @@ import {
   PanelTitle,
 } from "@/features/portfolio/components/panel"
 import { PanelTitleCopy } from "@/features/portfolio/components/panel-title-copy"
-import { Testimonials } from "@/features/portfolio/components/testimonials"
 import { USER } from "@/features/portfolio/data/user"
 
 const ID = "hello"
@@ -28,9 +26,6 @@ export function About() {
           <Markdown>{USER.about}</Markdown>
         </Prose>
       </PanelContent>
-
-      <Testimonials />
-      <GitHubContributions />
     </Panel>
   )
 }
