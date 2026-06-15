@@ -5,30 +5,35 @@ export const PROJECTS: Project[] = [
     id: "dzikra",
     title: "Dzikra",
     period: {
-      start: "2024",
+      start: "09.2024",
+      end: "12.2024",
     },
     link: "https://play.google.com/store/apps/details?id=id.bigio.dzikra&hl=en",
     skills: ["Flutter", "Dart", "Firebase", "GetX"],
-    description: `Production mobile app on Google Play Store, built to help users maintain daily worship habits with gentle routine tracking and consistency-focused UX.
-- Live on Play Store with Firebase backend, real-time sync, and notification-driven habit loops designed for high-mobility users.`,
+    description: `>_ Focus: Consumer Habit-Tracking App (Production)
+>_ Architecture: Engineered a high-performance Flutter mobile client integrated with GetX state management and Firebase real-time sync.
+>_ Impact: Successfully deployed to Google Play Store. Established sticky, notification-driven habit loops with a frictionless UX tailored for high-mobility daily active users.`,
     isExpanded: true,
   },
   {
     id: "raisehand",
     title: "Raisehand",
     period: {
-      start: "2024",
+      start: "08.2024",
+      end: "12.2024",
     },
     link: "https://play.google.com/store/apps/details?id=id.inovasi360.attendapp&hl=en",
     skills: ["Flutter", "Dart", "Firebase", "GetX"],
-    description: `Production employee attendance app for Inovasi360 and Bigio, featuring GPS-based check-in, push notifications, and automated leave request workflows.
-- Deployed on Google Play Store, used daily by employees for location-verified attendance tracking and leave management.`,
+    description: `>_ Focus: Enterprise HR & Attendance System (Production)
+>_ Architecture: Designed a secure, location-aware Flutter application utilizing GPS-based verification and automated push-notification pipelines.
+>_ Impact: Digitized core HR operations for Inovasi360 & Bigio, transforming manual leave requests and attendance tracking into an automated, zero-friction mobile workflow.`,
   },
   {
     id: "eztix-id",
     title: "Eztix.id",
     period: {
-      start: "2024",
+      start: "03.2025",
+      end: "07.2025",
     },
     link: "https://eztix.id/",
     skills: [
@@ -39,19 +44,22 @@ export const PROJECTS: Project[] = [
       "Node.js",
       "REST API",
     ],
-    description: `Web booking platform for browsing events, reviewing ticket details, and reserving with Firebase-backed auth.
-- Brings customer booking and admin management into one event operations product.`,
+    description: `>_ Focus: Full-Stack Event Ticketing Platform
+>_ Architecture: Architected a scalable Next.js and TypeScript frontend seamlessly integrated with a Node.js REST API and Firebase Authentication.
+>_ Impact: Consolidated consumer-facing ticket reservations and backend administrative operations into a single, high-performance web ecosystem.`,
   },
   {
     id: "room-space-booking",
-    title: "Room and Space Booking Website",
+    title: "Room and Space Booking",
     period: {
-      start: "2024",
+      start: "09.2023",
+      end: "06.2024",
     },
     link: "#",
     skills: ["Laravel", "PHP", "MySQL", "Tailwind"],
-    description: `Booking system with authentication, user management, and CRUD workflows for room reservation operations.
-- Built to help teams manage availability, booking flow, and administration in one place.`,
+    description: `>_ Focus: Corporate Resource Allocation System
+>_ Architecture: Built a robust monolithic application using Laravel and MySQL, styled with Tailwind CSS for rapid and responsive UI development.
+>_ Impact: Streamlined internal space reservations by replacing fragmented booking methods with a centralized, role-based availability tracking platform.`,
   },
   {
     id: "emonesia",
@@ -61,8 +69,9 @@ export const PROJECTS: Project[] = [
     },
     link: "https://github.com/razor322/emonesia",
     skills: ["Flutter", "Dart", "Firebase", "GetX", "REST API"],
-    description: `Emotion detection app powered by IndoBERT NLP model, analyzing social media conversations from X (Twitter) by keyword and time range with structured reporting.
-- Transforms unstructured public conversation data into categorized emotional insights with downloadable CSV reports.`,
+    description: `>_ Focus: AI-Powered Social Sentiment Analytics
+>_ Architecture: Integrated a fine-tuned IndoBERT NLP model with a Flutter frontend via REST API to process live data streams from X (Twitter).
+>_ Impact: Transformed massive volumes of unstructured public discourse into structured, categorizable emotional insights and exportable CSV reports for data-driven decision making.`,
   },
   {
     id: "trolley-petani",
@@ -72,18 +81,20 @@ export const PROJECTS: Project[] = [
     },
     link: "https://github.com/razor322/trolley-v2",
     skills: ["Flutter", "Dart"],
-    description: `Lightweight e-commerce app connecting customers directly with produce from local farmers and ranchers, built with Flutter.
-- Awarded Rising Star recognition at the UNIMAS international competition for its clear value proposition and agricultural impact potential.`,
+    description: `>_ Focus: D2C Agri-Tech Mobile Platform
+>_ Architecture: Engineered a scalable Flutter application designed to bypass traditional, fragmented agricultural supply chains.
+>_ Impact: Awarded 'Rising Star' at UNIMAS (Malaysia) for establishing a direct-to-consumer ecosystem that maximizes farmer profit margins and ensures transparent product tracking.`,
   },
   {
     id: "sea-catering",
-    title: "Catering Management System",
+    title: "SEA Catering Management",
     period: {
       start: "2024",
     },
     link: "https://github.com/razor322/sea-catering",
     skills: ["Next.js", "shadcn/ui", "TypeScript", "Node.js", "Express"],
-    description: `Management system for orders, inventory, and customer relationships in catering workflow.
-- Combines service operations into one product surface for smoother day-to-day management.`,
+    description: `>_ Focus: B2B Operations Prototype (SEA Academy Project)
+>_ Architecture: Developed a modular Next.js frontend with shadcn/ui and TypeScript, orchestrated with a Node.js/Express backend for robust relational data handling.
+>_ Impact: Architected an end-to-end catering management prototype for COMPFEST 17. Successfully demonstrated the capability to centralize complex order states, inventory logic, and CRM workflows into a unified command center.`,
   },
 ]

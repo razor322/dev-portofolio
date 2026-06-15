@@ -1,7 +1,6 @@
 import {
   BriefcaseBusinessIcon,
   CodeXmlIcon,
-  GraduationCapIcon,
 } from "lucide-react"
 
 import type { Experience } from "../types/experiences"
@@ -16,13 +15,13 @@ export const EXPERIENCES: Experience[] = [
         id: "1",
         title: "Software Engineer",
         employmentPeriod: {
-          start: "2025",
+          start: "2026",
         },
         employmentType: "Full-time",
         icon: <CodeXmlIcon />,
-        description: `- Building production interfaces and bringing AI into modern product workflows.
-- Ship full-stack features from database design to pixel-perfect frontends with Shadcn UI, Aceternity, and Framer Motion.
-- Build concepts like Zenith, exploring premium branding and scalable architecture inspired by Linear, Stripe, Arc, and Notion.`,
+        description: `>_ Role: Full-Stack Product Engineer
+>_ Architecture: Orchestrating high-performance, scalable web infrastructure utilizing Next.js App Router, TypeScript, and Prisma ORM backed by PostgreSQL and Dockerized environments.
+>_ Impact: Pioneering AI-integrated workflows and premium UI/UX architectures (inspired by Stripe & Linear) utilizing Framer Motion and Shadcn. Enforcing strict CI/CD pipelines with Conventional Commits to maintain zero-regression deployments.`,
         skills: [
           "Next.js",
           "React",
@@ -53,10 +52,9 @@ export const EXPERIENCES: Experience[] = [
         },
         employmentType: "Internship",
         icon: <CodeXmlIcon />,
-        description: `- Shipped mobile products with cross-functional teams, enforcing code review discipline and production-ready delivery standards.
-- Translated product requirements into Flutter implementations alongside designers and product managers, reducing feature-to-prototype cycle time.
-- Enforced code review practices that reduced post-release bug reports and improved team code quality.
-- Launched a production mobile app (Raisehand) now used for daily employee attendance across the organization.`,
+        description: `>_ Role: Mobile Engineering Intern
+>_ Architecture: Engineered production-grade Flutter applications utilizing GetX state management and Firebase real-time synchronization.
+>_ Impact: Spearheaded the deployment of 'Raisehand' (Enterprise HR App). Drastically reduced post-release bugs and accelerated feature-to-prototype cycles by institutionalizing rigorous Pull Request templates and strict code-review disciplines across cross-functional pods.`,
         skills: [
           "Flutter",
           "Dart",
@@ -83,10 +81,9 @@ export const EXPERIENCES: Experience[] = [
         },
         employmentType: "Internship",
         icon: <CodeXmlIcon />,
-        description: `- Built reservation and booking systems with Laravel, handling full-stack delivery from database design to production deployment over 10 months.
-- Developed a meeting room reservation system from scratch — database schema, REST API, authentication, and responsive UI — used daily by internal teams.
-- Executed full development lifecycle across design, implementation, and testing using Laravel MVC architecture and MySQL.
-- Delivered API integrations and booking features through cross-team collaboration, shipping production code over a 10-month engagement.`,
+        description: `>_ Role: Full-Stack Engineering Intern
+>_ Architecture: Architected an end-to-end monolithic internal platform using the Laravel MVC framework and relational MySQL databases.
+>_ Impact: Digitized and centralized corporate asset allocation. Single-handedly managed the entire software development lifecycle (SDLC)—from database schema design to production deployment—delivering a robust meeting room reservation system utilized daily by internal divisions.`,
         skills: [
           "Laravel",
           "PHP",
@@ -96,38 +93,6 @@ export const EXPERIENCES: Experience[] = [
           "JavaScript",
           "Full Stack",
           "MVC",
-        ],
-      },
-    ],
-  },
-  {
-    id: "education",
-    companyName: "Education",
-    companyIcon: <GraduationCapIcon strokeWidth={1.8} />,
-    positions: [
-      {
-        id: "1",
-        title: "Politeknik Negeri Padang",
-        employmentPeriod: {
-          start: "2022",
-          end: "2026",
-        },
-        icon: <GraduationCapIcon />,
-        description: `- D-IV in Software Engineering.
-- Chose building real systems over theory, racing peers to learn tech before it hit the syllabus.
-- Ship fast, learn faster — because the real craft is the whole product, not just the code.`,
-        skills: [
-          "Software Engineering",
-          "Flutter",
-          "Next.js",
-          "React",
-          "TypeScript",
-          "Laravel",
-          "PHP",
-          "MySQL",
-          "Firebase",
-          "Docker",
-          "PostgreSQL",
         ],
       },
     ],
