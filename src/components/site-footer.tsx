@@ -1,3 +1,5 @@
+import { MessageCircleIcon } from "lucide-react"
+
 import { LICENSE, SOURCE_CODE_GITHUB_URL } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
@@ -6,9 +8,9 @@ import { getSocialLinkByName } from "@/features/portfolio/data/social-links-v2"
 import { USER } from "@/features/portfolio/data/user"
 
 export function SiteFooter() {
-  const xLink = getSocialLinkByName("x")
   const githubLink = getSocialLinkByName("github")
   const linkedinLink = getSocialLinkByName("linkedin")
+  const whatsappLink = getSocialLinkByName("whatsapp")
 
   return (
     <footer className="max-w-screen overflow-x-clip px-2">
@@ -21,41 +23,12 @@ export function SiteFooter() {
             <dd>
               <a
                 className="link-underline"
-                href={xLink?.href}
+                href={USER.website}
                 target="_blank"
                 rel="noopener"
               >
                 {USER.displayName}
               </a>
-            </dd>
-          </Item>
-
-          <Item>
-            <dt>Inspired by</dt>
-            <dd>
-              <ul>
-                <li>tailwindcss.com</li>
-                <li>ui.shadcn.com</li>
-                <li>vercel.com</li>
-                <li>evilcharts.com</li>
-                <li>devouringdetails.com</li>
-                <li>skiper-ui.com</li>
-              </ul>
-            </dd>
-          </Item>
-
-          <Item>
-            <dt>Deployed on</dt>
-            <dd>Vercel</dd>
-          </Item>
-
-          <Item>
-            <dt>Analytics</dt>
-            <dd>
-              <ul>
-                <li>OpenPanel</li>
-                <li>PostHog</li>
-              </ul>
             </dd>
           </Item>
 
@@ -86,65 +59,60 @@ export function SiteFooter() {
               </a>
             </dd>
           </Item>
+
+          <Item>
+            <dt>Deployed on</dt>
+            <dd>Vercel</dd>
+          </Item>
         </dl>
 
         <div className="screen-line-top screen-line-bottom flex w-full before:z-1 after:z-1">
           <div className="mx-auto flex items-center justify-center gap-3 border-x border-line bg-background px-4">
-            <a
-              className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
-              href={xLink?.href}
-              target="_blank"
-              rel="noopener"
-              aria-label="X Profile"
-            >
-              <Icons.x className="size-4" />
-            </a>
+            {githubLink?.href && (
+              <>
+                <a
+                  className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
+                  href={githubLink.href}
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="GitHub Profile"
+                >
+                  <Icons.github className="size-4" />
+                </a>
 
-            <Separator />
+                <Separator />
+              </>
+            )}
 
-            <a
-              className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
-              href={githubLink?.href}
-              target="_blank"
-              rel="noopener"
-              aria-label="GitHub Profile"
-            >
-              <Icons.github className="size-4" />
-            </a>
+            {linkedinLink?.href && (
+              <>
+                <a
+                  className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
+                  href={linkedinLink.href}
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn Profile"
+                >
+                  <Icons.linkedin className="size-4" />
+                </a>
 
-            <Separator />
+                <Separator />
+              </>
+            )}
 
-            <a
-              className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
-              href={linkedinLink?.href}
-              target="_blank"
-              rel="noopener"
-              aria-label="LinkedIn Profile"
-            >
-              <Icons.linkedin className="size-4" />
-            </a>
-
-            <Separator />
-
-            <a
-              className="flex text-muted-foreground transition-[color] hover:text-foreground"
-              href={
-                process.env.NEXT_PUBLIC_DMCA_URL ||
-                "https://www.dmca.com/ProtectionPro.aspx"
-              }
-              target="_blank"
-              rel="noopener"
-              aria-label="DMCA.com Protection Status"
-            >
-              <Icons.dmca className="h-4.5 w-auto" />
-            </a>
+            {whatsappLink?.href && (
+              <a
+                className="flex items-center text-muted-foreground transition-[color] hover:text-foreground"
+                href={whatsappLink.href}
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+              >
+                <MessageCircleIcon className="size-4" />
+              </a>
+            )}
           </div>
         </div>
-
-        {/* <div className="*:absolute *:z-2 *:flex *:size-2 *:border *:border-line *:bg-background">
-          <div className="bottom-[-3.5px] left-[-4.5px]" />
-          <div className="right-[-4.5px] bottom-[-3.5px]" />
-        </div> */}
       </div>
 
       <SiteFooterInteractiveLogotype />
