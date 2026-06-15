@@ -4,7 +4,6 @@ import { BriefcaseBusinessIcon, InfinityIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
 import { Tag } from "@/components/ui/tag"
-import { Prose } from "@/components/ui/typography"
 import {
   Collapsible,
   CollapsibleChevronsUpDownIcon,
@@ -13,8 +12,41 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/base/ui/collapsible"
-import { Markdown } from "@/components/markdown"
 import type { ExperiencePosition } from "@/features/portfolio/types/experiences"
+
+const EXP_SECTION_REGEX = />_ (\w+): (.+)/g
+
+type ExpSection = { label: string; content: string }
+
+function parseExpSections(description: string): ExpSection[] {
+  const sections: ExpSection[] = []
+  let match: RegExpExecArray | null
+  while ((match = EXP_SECTION_REGEX.exec(description)) !== null) {
+    sections.push({ label: match[1]!, content: match[2]!.trim() })
+  }
+  return sections
+}
+
+function ExperienceDescription({ description }: { description: string }) {
+  const sections = parseExpSections(description)
+
+  if (sections.length === 0) {
+    return <p className="text-sm text-muted-foreground">{description}</p>
+  }
+
+  return (
+    <div className="space-y-2">
+      {sections.map((section) => (
+        <div key={section.label} className="text-sm leading-relaxed">
+          <span className="mr-1.5 font-semibold text-foreground">
+            {section.label}:
+          </span>
+          <span className="text-muted-foreground">{section.content}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export function ExperiencePositionItem({
   position,
@@ -114,9 +146,9 @@ export function ExperiencePositionItem({
 
       <CollapsibleContent className="overflow-hidden">
         {position.description && (
-          <Prose className="pt-2 pl-9">
-            <Markdown>{position.description}</Markdown>
-          </Prose>
+          <div className="pt-2 pl-9">
+            <ExperienceDescription description={position.description} />
+          </div>
         )}
       </CollapsibleContent>
 

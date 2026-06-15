@@ -3,7 +3,6 @@ import { Crown, Paperclip } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
-import { Prose } from "@/components/ui/typography"
 import {
   Collapsible,
   CollapsibleChevronsUpDownIcon,
@@ -17,8 +16,41 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/base/ui/tooltip"
-import { Markdown } from "@/components/markdown"
 import type { Award } from "@/features/portfolio/types/awards"
+
+const SECTION_REGEX = /> \*\*(.+?):\*\* (.+)/g
+
+type Section = { label: string; content: string }
+
+function parseSections(description: string): Section[] {
+  const sections: Section[] = []
+  let match: RegExpExecArray | null
+  while ((match = SECTION_REGEX.exec(description)) !== null) {
+    sections.push({ label: match[1]!, content: match[2]!.trim() })
+  }
+  return sections
+}
+
+function AwardDescription({ description }: { description: string }) {
+  const sections = parseSections(description)
+
+  if (sections.length === 0) {
+    return <p className="text-sm text-muted-foreground">{description}</p>
+  }
+
+  return (
+    <div className="space-y-3">
+      {sections.map((section) => (
+        <div key={section.label} className="text-sm leading-relaxed">
+          <span className="mr-1.5 font-semibold text-foreground">
+            {section.label}:
+          </span>
+          <span className="text-muted-foreground">{section.content}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export function AwardItem({
   className,
@@ -114,9 +146,9 @@ export function AwardItem({
 
       {canExpand && (
         <CollapsibleContent className="overflow-hidden">
-          <Prose className="border-t border-line p-4">
-            <Markdown>{award.description}</Markdown>
-          </Prose>
+          <div className="border-t border-line p-4">
+            <AwardDescription description={award.description!} />
+          </div>
         </CollapsibleContent>
       )}
     </Collapsible>
