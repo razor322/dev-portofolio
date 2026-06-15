@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-chanhdai.com — a Next.js 16 (App Router) developer portfolio and shadcn/ui component registry. TypeScript strict mode, Tailwind CSS v4, MDX content, deployed on Vercel.
+gybrannauval.site — a Next.js 16 (App Router) developer portfolio built from the chanhdai.com template. TypeScript strict mode, Tailwind CSS v4, MDX content, deployed on Vercel.
 
 ## Commands
 
