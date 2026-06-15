@@ -27,9 +27,9 @@ export const USER: User = {
     },
   ],
   about: `
-- I'm Gybran Nauval — a Software Engineer based in Padang, Indonesia, building production interfaces and bringing AI into modern product workflows.
-- I work across product design, frontend, mobile, and backend — shipping 7+ production apps across mobile, web, and AI.
-- My stack spans 15+ technologies (Flutter, Next.js, React, TypeScript, NestJS, Docker, PostgreSQL, Prisma), and every system I build is designed to scale.
+- Gybran Nauval — Software Engineer based in Padang, Indonesia. Specializing in high-performance interfaces and bringing AI into modern product workflows.
+- Operating across the full product lifecycle (UI/UX, Mobile, Web, and Backend infrastructure), with a track record of shipping 7+ production platforms.
+- Agnostic but highly specialized. Orchestrating scalable ecosystems using Next.js, React, Flutter, and NestJS, backed by robust Docker, PostgreSQL, and Prisma environments.
 - I design and build digital products that connect great user experiences with reliable engineering.
 `,
   avatar: "/images/light.webp",
