@@ -8,6 +8,7 @@ import {
 } from "@/features/portfolio/components/panel"
 import { PanelTitleCopy } from "@/features/portfolio/components/panel-title-copy"
 import { USER } from "@/features/portfolio/data/user"
+import { GitHubContributions } from "./github-contributions"
 
 const ID = "hello"
 
@@ -26,6 +27,8 @@ export function About() {
           <Markdown>{USER.about}</Markdown>
         </Prose>
       </PanelContent>
+
+      <GitHubContributions />
     </Panel>
   )
 }
