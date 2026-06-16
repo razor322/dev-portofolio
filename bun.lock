@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "chanhdai.com",
+      "name": "gybran.com",
       "dependencies": {
         "@base-ui/react": "^1.5.0",
         "@bprogress/next": "^3.2.12",
