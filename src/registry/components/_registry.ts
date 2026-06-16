@@ -3,23 +3,6 @@ import type { Registry } from "shadcn/schema"
 
 export const components: Registry["items"] = [
   {
-    name: "theme-switcher",
-    type: "registry:component",
-    title: "Theme Switcher",
-    description:
-      "Toggle between system, light, and dark themes in Next.js apps.",
-    dependencies: ["next-themes", "motion"],
-    files: [
-      {
-        path: "components/theme-switcher/theme-switcher.tsx",
-        type: "registry:component",
-        target: "@components/theme-switcher.tsx",
-      },
-    ],
-    categories: ["controls"],
-    docs: "https://chanhdai.com/components/theme-switcher",
-  },
-  {
     name: "text-flip",
     type: "registry:component",
     title: "Text Flip",
@@ -40,7 +23,7 @@ export const components: Registry["items"] = [
     name: "apple-hello-effect",
     type: "registry:component",
     title: "Apple Hello Effect",
-    description: "SVG writing animation inspired by Apple’s Hello screen.",
+    description: "SVG writing animation inspired by Apple's Hello screen.",
     dependencies: ["motion"],
     files: [
       {
@@ -56,7 +39,7 @@ export const components: Registry["items"] = [
     name: "apple-hello-effect-hindi",
     type: "registry:component",
     title: "Apple Hello Effect - Hindi",
-    description: "SVG writing animation inspired by Apple’s Hello screen.",
+    description: "SVG writing animation inspired by Apple's Hello screen.",
     dependencies: ["motion"],
     files: [
       {
@@ -72,7 +55,7 @@ export const components: Registry["items"] = [
     name: "apple-hello-effect-spanish",
     type: "registry:component",
     title: "Apple Hello Effect - Spanish",
-    description: "SVG writing animation inspired by Apple’s Hello screen.",
+    description: "SVG writing animation inspired by Apple's Hello screen.",
     dependencies: ["motion"],
     files: [
       {
@@ -88,7 +71,7 @@ export const components: Registry["items"] = [
     name: "apple-hello-effect-vietnamese",
     type: "registry:component",
     title: "Apple Hello Effect - Vietnamese",
-    description: "SVG writing animation inspired by Apple’s Hello screen.",
+    description: "SVG writing animation inspired by Apple's Hello screen.",
     dependencies: ["motion"],
     files: [
       {
@@ -134,64 +117,6 @@ export const components: Registry["items"] = [
     docs: "https://chanhdai.com/components/chevrons-up-down-icon",
   },
   {
-    name: "typography",
-    type: "registry:component",
-    title: "Typography",
-    description:
-      "Custom prose styles for headings, links, inline code, and emphasis.",
-    devDependencies: ["@tailwindcss/typography"],
-    css: {
-      "@plugin @tailwindcss/typography": {},
-      "@custom-variant retina": {
-        "@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2x)": {
-          "@slot": {},
-        },
-      },
-      "@utility link": {
-        "@apply decoration-1 underline-offset-3 hover:underline": {},
-      },
-      "@utility link-underline": {
-        "@apply underline decoration-current/30 decoration-1 underline-offset-3 transition-colors hover:decoration-current":
-          {},
-      },
-      "@utility prose-ncdai": {
-        "@apply prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-pretty md:prose-headings:text-balance":
-          {},
-        "@apply prose-a:font-normal prose-a:wrap-break-word prose-a:text-foreground prose-a:link-underline":
-          {},
-        "@apply prose-code:rounded-md prose-code:border prose-code:bg-muted/50 prose-code:px-1 prose-code:py-px prose-code:text-sm prose-code:font-normal prose-code:before:content-none prose-code:after:content-none retina:prose-code:border-[0.5px]":
-          {},
-        "@apply prose-strong:font-medium": {},
-        "@apply prose-blockquote:border-l prose-blockquote:font-normal prose-blockquote:text-muted-foreground prose-blockquote:not-italic prose-blockquote:[&_p:first-of-type]:before:content-none prose-blockquote:[&_p:last-of-type]:after:content-none":
-          {},
-      },
-    },
-    categories: ["typography"],
-  },
-  {
-    name: "work-experience",
-    type: "registry:component",
-    title: "Work Experience",
-    description:
-      "Display work experiences with role details, company logos, and durations.",
-    dependencies: ["react-markdown", "date-fns"],
-    registryDependencies: [
-      "collapsible",
-      "separator",
-      getRegistryItemUrl("chevrons-up-down-icon"),
-      getRegistryItemUrl("typography"),
-    ],
-    files: [
-      {
-        path: "components/work-experience/work-experience.tsx",
-        type: "registry:component",
-        target: "@components/work-experience.tsx",
-      },
-    ],
-    categories: ["marketing"],
-    docs: "https://chanhdai.com/components/work-experience-component",
-  },
-  {
     name: "shimmering-text",
     type: "registry:component",
     title: "Shimmering Text",
@@ -212,7 +137,7 @@ export const components: Registry["items"] = [
     type: "registry:component",
     title: "Slide to Unlock",
     description:
-      "Interactive slider inspired by the classic iPhone “slide to unlock” gesture.",
+      "Interactive slider inspired by the classic iPhone slide-to-unlock gesture.",
     dependencies: ["motion"],
     registryDependencies: [getRegistryItemUrl("shimmering-text")],
     files: [
@@ -224,18 +149,6 @@ export const components: Registry["items"] = [
     ],
     categories: ["controls"],
     docs: "https://chanhdai.com/components/slide-to-unlock",
-  },
-  {
-    name: "testimonials-marquee",
-    type: "registry:component",
-    title: "Testimonials Marquee",
-    description: "Scrolling marquee to showcase user testimonials.",
-    registryDependencies: [
-      "@kibo-ui/marquee",
-      getRegistryItemUrl("testimonial"),
-    ],
-    categories: ["marketing"],
-    docs: "https://chanhdai.com/components/testimonials-marquee",
   },
   {
     name: "testimonial",
@@ -252,23 +165,6 @@ export const components: Registry["items"] = [
     ],
     categories: ["marketing"],
     docs: "https://chanhdai.com/components/testimonial",
-  },
-  {
-    name: "github-stars",
-    type: "registry:component",
-    title: "GitHub Stars",
-    description:
-      "Display GitHub repo star count with formatted numbers and full-count tooltip.",
-    registryDependencies: ["button", "tooltip"],
-    files: [
-      {
-        path: "components/github-stars/github-stars.tsx",
-        type: "registry:component",
-        target: "@components/github-stars.tsx",
-      },
-    ],
-    categories: ["data-display"],
-    docs: "https://chanhdai.com/components/github-stars",
   },
   {
     name: "scroll-fade-effect",
@@ -367,24 +263,6 @@ export const components: Registry["items"] = [
     },
     categories: ["effects"],
     docs: "https://chanhdai.com/components/scroll-fade-effect",
-  },
-  {
-    name: "consent-manager",
-    type: "registry:component",
-    title: "Consent Manager",
-    description:
-      "Cookie and tracking consent banner for Next.js, built on c15t.",
-    dependencies: ["@c15t/nextjs"],
-    registryDependencies: ["button"],
-    files: [
-      {
-        path: "components/consent-manager/consent-manager.tsx",
-        type: "registry:component",
-        target: "@components/consent-manager.tsx",
-      },
-    ],
-    categories: ["utilities"],
-    docs: "https://chanhdai.com/components/consent-manager",
   },
   {
     name: "copy-button",
@@ -594,23 +472,6 @@ export const components: Registry["items"] = [
     docs: "https://chanhdai.com/components/github-contributions",
   },
   {
-    name: "toc-minimap",
-    type: "registry:component",
-    title: "TOC Minimap",
-    description:
-      "Navigate page sections with a compact, hoverable TOC minimap.",
-    registryDependencies: ["hover-card", "@soundcn/u-mini-map-open"],
-    files: [
-      {
-        path: "components/toc-minimap/toc-minimap.tsx",
-        type: "registry:component",
-        target: "@components/toc-minimap.tsx",
-      },
-    ],
-    categories: ["navigation"],
-    docs: "https://chanhdai.com/components/toc-minimap",
-  },
-  {
     name: "fluid-gradient-text",
     type: "registry:component",
     title: "Fluid Gradient Text",
@@ -661,22 +522,6 @@ export const components: Registry["items"] = [
     docs: "https://chanhdai.com/components/icon-swap",
   },
   {
-    name: "dot-grid-spotlight",
-    type: "registry:component",
-    title: "Dot Grid Spotlight",
-    description:
-      "Interactive dot grid with a cursor-tracking spotlight effect.",
-    files: [
-      {
-        path: "components/dot-grid-spotlight/dot-grid-spotlight.tsx",
-        type: "registry:component",
-        target: "@components/dot-grid-spotlight.tsx",
-      },
-    ],
-    categories: ["effects"],
-    docs: "https://chanhdai.com/components/dot-grid-spotlight",
-  },
-  {
     name: "spinning-circular-text",
     type: "registry:component",
     title: "Spinning Circular Text",
@@ -706,20 +551,20 @@ export const components: Registry["items"] = [
     docs: "https://chanhdai.com/components/spinning-circular-text",
   },
   {
-    name: "mobius-loop-icon",
+    name: "theme-switcher",
     type: "registry:component",
-    title: "Mobius Loop Icon",
+    title: "Theme Switcher",
     description:
-      "Animated Mobius loop icon that morphs between circles and infinity shape.",
-    dependencies: ["motion"],
+      "Toggle between system, light, and dark themes in Next.js apps.",
+    dependencies: ["next-themes", "motion"],
     files: [
       {
-        path: "components/mobius-loop-icon/mobius-loop-icon.tsx",
+        path: "components/theme-switcher/theme-switcher.tsx",
         type: "registry:component",
-        target: "@components/mobius-loop-icon.tsx",
+        target: "@components/theme-switcher.tsx",
       },
     ],
-    categories: ["effects"],
-    docs: "https://chanhdai.com/components/mobius-loop-icon",
+    categories: ["controls"],
+    docs: "https://chanhdai.com/components/theme-switcher",
   },
 ]

@@ -25,16 +25,4 @@ export const hook: Registry["items"] = [
       },
     ],
   },
-  {
-    name: "use-controllable-state",
-    type: "registry:hook",
-    title: "useControllableState",
-    files: [
-      {
-        path: "hooks/use-controllable-state/use-controllable-state.tsx",
-        type: "registry:hook",
-        target: "@hooks/use-controllable-state.tsx",
-      },
-    ],
-  },
 ]

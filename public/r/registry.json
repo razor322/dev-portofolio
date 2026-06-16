@@ -46,41 +46,6 @@
       "author": "ncdai <dai@chanhdai.com>"
     },
     {
-      "name": "use-controllable-state",
-      "title": "useControllableState",
-      "files": [
-        {
-          "path": "src/registry/hooks/use-controllable-state/use-controllable-state.tsx",
-          "type": "registry:hook",
-          "target": "@hooks/use-controllable-state.tsx"
-        }
-      ],
-      "type": "registry:hook",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
-      "name": "theme-switcher",
-      "title": "Theme Switcher",
-      "description": "Toggle between system, light, and dark themes in Next.js apps.",
-      "dependencies": [
-        "next-themes",
-        "motion"
-      ],
-      "files": [
-        {
-          "path": "src/registry/components/theme-switcher/theme-switcher.tsx",
-          "type": "registry:component",
-          "target": "@components/theme-switcher.tsx"
-        }
-      ],
-      "docs": "https://chanhdai.com/components/theme-switcher",
-      "categories": [
-        "controls"
-      ],
-      "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
       "name": "text-flip",
       "title": "Text Flip",
       "description": "Animated text that cycles through items with a smooth flip transition.",
@@ -104,7 +69,7 @@
     {
       "name": "apple-hello-effect",
       "title": "Apple Hello Effect",
-      "description": "SVG writing animation inspired by Apple’s Hello screen.",
+      "description": "SVG writing animation inspired by Apple's Hello screen.",
       "dependencies": [
         "motion"
       ],
@@ -125,7 +90,7 @@
     {
       "name": "apple-hello-effect-hindi",
       "title": "Apple Hello Effect - Hindi",
-      "description": "SVG writing animation inspired by Apple’s Hello screen.",
+      "description": "SVG writing animation inspired by Apple's Hello screen.",
       "dependencies": [
         "motion"
       ],
@@ -146,7 +111,7 @@
     {
       "name": "apple-hello-effect-spanish",
       "title": "Apple Hello Effect - Spanish",
-      "description": "SVG writing animation inspired by Apple’s Hello screen.",
+      "description": "SVG writing animation inspired by Apple's Hello screen.",
       "dependencies": [
         "motion"
       ],
@@ -167,7 +132,7 @@
     {
       "name": "apple-hello-effect-vietnamese",
       "title": "Apple Hello Effect - Vietnamese",
-      "description": "SVG writing animation inspired by Apple’s Hello screen.",
+      "description": "SVG writing animation inspired by Apple's Hello screen.",
       "dependencies": [
         "motion"
       ],
@@ -227,69 +192,6 @@
       "author": "ncdai <dai@chanhdai.com>"
     },
     {
-      "name": "typography",
-      "title": "Typography",
-      "description": "Custom prose styles for headings, links, inline code, and emphasis.",
-      "devDependencies": [
-        "@tailwindcss/typography"
-      ],
-      "css": {
-        "@plugin @tailwindcss/typography": {},
-        "@custom-variant retina": {
-          "@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2x)": {
-            "@slot": {}
-          }
-        },
-        "@utility link": {
-          "@apply decoration-1 underline-offset-3 hover:underline": {}
-        },
-        "@utility link-underline": {
-          "@apply underline decoration-current/30 decoration-1 underline-offset-3 transition-colors hover:decoration-current": {}
-        },
-        "@utility prose-ncdai": {
-          "@apply prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-pretty md:prose-headings:text-balance": {},
-          "@apply prose-a:font-normal prose-a:wrap-break-word prose-a:text-foreground prose-a:link-underline": {},
-          "@apply prose-code:rounded-md prose-code:border prose-code:bg-muted/50 prose-code:px-1 prose-code:py-px prose-code:text-sm prose-code:font-normal prose-code:before:content-none prose-code:after:content-none retina:prose-code:border-[0.5px]": {},
-          "@apply prose-strong:font-medium": {},
-          "@apply prose-blockquote:border-l prose-blockquote:font-normal prose-blockquote:text-muted-foreground prose-blockquote:not-italic prose-blockquote:[&_p:first-of-type]:before:content-none prose-blockquote:[&_p:last-of-type]:after:content-none": {}
-        }
-      },
-      "categories": [
-        "typography"
-      ],
-      "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>",
-      "files": []
-    },
-    {
-      "name": "work-experience",
-      "title": "Work Experience",
-      "description": "Display work experiences with role details, company logos, and durations.",
-      "dependencies": [
-        "react-markdown",
-        "date-fns"
-      ],
-      "registryDependencies": [
-        "collapsible",
-        "separator",
-        "https://acme.com/r/chevrons-up-down-icon.json",
-        "https://acme.com/r/typography.json"
-      ],
-      "files": [
-        {
-          "path": "src/registry/components/work-experience/work-experience.tsx",
-          "type": "registry:component",
-          "target": "@components/work-experience.tsx"
-        }
-      ],
-      "docs": "https://chanhdai.com/components/work-experience-component",
-      "categories": [
-        "marketing"
-      ],
-      "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
       "name": "shimmering-text",
       "title": "Shimmering Text",
       "description": "Smooth, light-sweeping shimmer animation for text.",
@@ -313,7 +215,7 @@
     {
       "name": "slide-to-unlock",
       "title": "Slide to Unlock",
-      "description": "Interactive slider inspired by the classic iPhone “slide to unlock” gesture.",
+      "description": "Interactive slider inspired by the classic iPhone slide-to-unlock gesture.",
       "dependencies": [
         "motion"
       ],
@@ -335,22 +237,6 @@
       "author": "ncdai <dai@chanhdai.com>"
     },
     {
-      "name": "testimonials-marquee",
-      "title": "Testimonials Marquee",
-      "description": "Scrolling marquee to showcase user testimonials.",
-      "registryDependencies": [
-        "@kibo-ui/marquee",
-        "https://acme.com/r/testimonial.json"
-      ],
-      "docs": "https://chanhdai.com/components/testimonials-marquee",
-      "categories": [
-        "marketing"
-      ],
-      "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>",
-      "files": []
-    },
-    {
       "name": "testimonial",
       "title": "Testimonial",
       "description": "Display user feedback with author info, avatar, and verified badge.",
@@ -364,28 +250,6 @@
       "docs": "https://chanhdai.com/components/testimonial",
       "categories": [
         "marketing"
-      ],
-      "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
-      "name": "github-stars",
-      "title": "GitHub Stars",
-      "description": "Display GitHub repo star count with formatted numbers and full-count tooltip.",
-      "registryDependencies": [
-        "button",
-        "tooltip"
-      ],
-      "files": [
-        {
-          "path": "src/registry/components/github-stars/github-stars.tsx",
-          "type": "registry:component",
-          "target": "@components/github-stars.tsx"
-        }
-      ],
-      "docs": "https://chanhdai.com/components/github-stars",
-      "categories": [
-        "data-display"
       ],
       "type": "registry:component",
       "author": "ncdai <dai@chanhdai.com>"
@@ -478,30 +342,6 @@
       "docs": "https://chanhdai.com/components/scroll-fade-effect",
       "categories": [
         "effects"
-      ],
-      "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
-      "name": "consent-manager",
-      "title": "Consent Manager",
-      "description": "Cookie and tracking consent banner for Next.js, built on c15t.",
-      "dependencies": [
-        "@c15t/nextjs"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/components/consent-manager/consent-manager.tsx",
-          "type": "registry:component",
-          "target": "@components/consent-manager.tsx"
-        }
-      ],
-      "docs": "https://chanhdai.com/components/consent-manager",
-      "categories": [
-        "utilities"
       ],
       "type": "registry:component",
       "author": "ncdai <dai@chanhdai.com>"
@@ -756,28 +596,6 @@
       "author": "ncdai <dai@chanhdai.com>"
     },
     {
-      "name": "toc-minimap",
-      "title": "TOC Minimap",
-      "description": "Navigate page sections with a compact, hoverable TOC minimap.",
-      "registryDependencies": [
-        "hover-card",
-        "@soundcn/u-mini-map-open"
-      ],
-      "files": [
-        {
-          "path": "src/registry/components/toc-minimap/toc-minimap.tsx",
-          "type": "registry:component",
-          "target": "@components/toc-minimap.tsx"
-        }
-      ],
-      "docs": "https://chanhdai.com/components/toc-minimap",
-      "categories": [
-        "navigation"
-      ],
-      "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
       "name": "fluid-gradient-text",
       "title": "Fluid Gradient Text",
       "description": "Render text with a fluid gradient that shifts with pointer movement.",
@@ -845,24 +663,6 @@
       "author": "ncdai <dai@chanhdai.com>"
     },
     {
-      "name": "dot-grid-spotlight",
-      "title": "Dot Grid Spotlight",
-      "description": "Interactive dot grid with a cursor-tracking spotlight effect.",
-      "files": [
-        {
-          "path": "src/registry/components/dot-grid-spotlight/dot-grid-spotlight.tsx",
-          "type": "registry:component",
-          "target": "@components/dot-grid-spotlight.tsx"
-        }
-      ],
-      "docs": "https://chanhdai.com/components/dot-grid-spotlight",
-      "categories": [
-        "effects"
-      ],
-      "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
       "name": "spinning-circular-text",
       "title": "Spinning Circular Text",
       "description": "Text arranged in a circle with a continuous spinning animation.",
@@ -893,290 +693,25 @@
       "author": "ncdai <dai@chanhdai.com>"
     },
     {
-      "name": "mobius-loop-icon",
-      "title": "Mobius Loop Icon",
-      "description": "Animated Mobius loop icon that morphs between circles and infinity shape.",
+      "name": "theme-switcher",
+      "title": "Theme Switcher",
+      "description": "Toggle between system, light, and dark themes in Next.js apps.",
       "dependencies": [
+        "next-themes",
         "motion"
       ],
       "files": [
         {
-          "path": "src/registry/components/mobius-loop-icon/mobius-loop-icon.tsx",
+          "path": "src/registry/components/theme-switcher/theme-switcher.tsx",
           "type": "registry:component",
-          "target": "@components/mobius-loop-icon.tsx"
+          "target": "@components/theme-switcher.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/mobius-loop-icon",
+      "docs": "https://chanhdai.com/components/theme-switcher",
       "categories": [
-        "effects"
+        "controls"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
-      "name": "login-01",
-      "title": "Login 01",
-      "description": "A simple login form.",
-      "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "label",
-        "field"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/login-01/page.tsx",
-          "type": "registry:page",
-          "target": "app/login/page.tsx"
-        },
-        {
-          "path": "src/registry/blocks/login-01/components/login-form.tsx",
-          "type": "registry:component",
-          "target": "@components/login-form.tsx"
-        }
-      ],
-      "meta": {
-        "createdAt": "2026-02-22"
-      },
-      "categories": [
-        "application"
-      ],
-      "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
-      "name": "hero-01",
-      "title": "Hero 01",
-      "description": "A hero section with a golden spiral background.",
-      "registryDependencies": [
-        "button",
-        "https://acme.com/r/style.json"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/hero-01/hero-01.tsx",
-          "type": "registry:component",
-          "target": "@components/hero-01.tsx"
-        },
-        {
-          "path": "src/registry/blocks/hero-01/components/hero-01-icons.tsx",
-          "type": "registry:component",
-          "target": "@components/hero-01-icons.tsx"
-        }
-      ],
-      "meta": {
-        "createdAt": "2026-03-12"
-      },
-      "categories": [
-        "marketing"
-      ],
-      "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
-      "name": "blog-01",
-      "title": "Blog 01",
-      "description": "A blog section with a grid layout.",
-      "dependencies": [
-        "date-fns"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/blog-01/blog-01.tsx",
-          "type": "registry:component",
-          "target": "@components/blog-01.tsx"
-        },
-        {
-          "path": "src/registry/blocks/blog-01/components/article-item.tsx",
-          "type": "registry:component",
-          "target": "@components/article-item.tsx"
-        }
-      ],
-      "meta": {
-        "createdAt": "2026-03-13"
-      },
-      "categories": [
-        "marketing"
-      ],
-      "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
-      "name": "blog-02",
-      "title": "Blog 02",
-      "description": "A blog section with a lined grid layout.",
-      "dependencies": [
-        "date-fns"
-      ],
-      "registryDependencies": [
-        "button",
-        "https://acme.com/r/style.json"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/blog-02/blog-02.tsx",
-          "type": "registry:component",
-          "target": "@components/blog-02.tsx"
-        },
-        {
-          "path": "src/registry/blocks/blog-02/components/article-item.tsx",
-          "type": "registry:component",
-          "target": "@components/article-item.tsx"
-        }
-      ],
-      "meta": {
-        "createdAt": "2026-03-18"
-      },
-      "categories": [
-        "marketing"
-      ],
-      "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
-      "name": "testimonials-01",
-      "title": "Testimonials 01",
-      "description": "A testimonials section with dual marquees.",
-      "registryDependencies": [
-        "https://www.kibo-ui.com/r/marquee.json",
-        "https://acme.com/r/testimonial-spotlight.json"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/testimonials-01/testimonials-01.tsx",
-          "type": "registry:component",
-          "target": "@components/testimonials-01.tsx"
-        },
-        {
-          "path": "src/registry/blocks/testimonials-01/components/testimonial-list.tsx",
-          "type": "registry:component",
-          "target": "@components/testimonial-list.tsx"
-        }
-      ],
-      "meta": {
-        "createdAt": "2026-03-20",
-        "previewClassName": "container mx-auto min-h-svh content-center-safe"
-      },
-      "categories": [
-        "marketing"
-      ],
-      "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
-      "name": "testimonials-02",
-      "title": "Testimonials 02",
-      "description": "A testimonials section with a lined layout.",
-      "registryDependencies": [
-        "https://www.kibo-ui.com/r/marquee.json",
-        "https://acme.com/r/style.json",
-        "https://acme.com/r/testimonial.json"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/testimonials-02/testimonials-02.tsx",
-          "type": "registry:component",
-          "target": "@components/testimonials-02.tsx"
-        },
-        {
-          "path": "src/registry/blocks/testimonials-02/components/testimonial-list.tsx",
-          "type": "registry:component",
-          "target": "@components/testimonial-list.tsx"
-        }
-      ],
-      "meta": {
-        "createdAt": "2026-03-29",
-        "previewClassName": "min-h-svh content-center-safe"
-      },
-      "categories": [
-        "marketing"
-      ],
-      "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
-      "name": "experience-01",
-      "title": "Experience 01",
-      "description": "A work experience section with a lined layout.",
-      "registryDependencies": [
-        "https://acme.com/r/style.json",
-        "https://acme.com/r/work-experience.json"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/experience-01/experience-01.tsx",
-          "type": "registry:component",
-          "target": "@components/experience-01.tsx"
-        }
-      ],
-      "meta": {
-        "createdAt": "2026-03-28"
-      },
-      "categories": [
-        "marketing"
-      ],
-      "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
-      "name": "team-01",
-      "title": "Team 01",
-      "description": "A team section with glowing cards.",
-      "registryDependencies": [
-        "https://acme.com/r/glow-card-grid.json"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/team-01/team-01.tsx",
-          "type": "registry:component",
-          "target": "@components/team-01.tsx"
-        }
-      ],
-      "meta": {
-        "createdAt": "2026-03-30",
-        "previewClassName": "min-h-svh place-items-center-safe content-center-safe"
-      },
-      "categories": [
-        "marketing"
-      ],
-      "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
-    },
-    {
-      "name": "metrics-01",
-      "title": "Metrics 01",
-      "description": "A metrics section with a line chart.",
-      "dependencies": [
-        "date-fns"
-      ],
-      "registryDependencies": [
-        "@bklit/line-chart",
-        "https://acme.com/r/style.json"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/metrics-01/metrics-01.tsx",
-          "type": "registry:component",
-          "target": "@components/metrics-01.tsx"
-        },
-        {
-          "path": "src/registry/blocks/metrics-01/components/metric.tsx",
-          "type": "registry:component",
-          "target": "@components/metric.tsx"
-        }
-      ],
-      "meta": {
-        "createdAt": "2026-05-24",
-        "previewClassName": "min-h-svh content-center-safe"
-      },
-      "categories": [
-        "marketing"
-      ],
-      "type": "registry:block",
       "author": "ncdai <dai@chanhdai.com>"
     },
     {
