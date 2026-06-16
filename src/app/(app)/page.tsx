@@ -6,7 +6,6 @@ import { JsonLdScript } from "@/lib/json-ld"
 import { cn } from "@/lib/utils"
 import { About } from "@/features/portfolio/components/about"
 import { Awards } from "@/features/portfolio/components/awards"
-import { Blog } from "@/features/portfolio/components/blog"
 import { Bookmarks } from "@/features/portfolio/components/bookmarks"
 import { Certifications } from "@/features/portfolio/components/certifications"
 import { Education } from "@/features/portfolio/components/education"
@@ -48,11 +47,6 @@ export default function HomePage() {
           <Separator />
 
           <TechStack />
-          <Separator />
-
-
-
-          <Blog />
           <Separator />
 
           <Experiences />

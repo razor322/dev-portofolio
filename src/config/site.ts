@@ -30,10 +30,6 @@ export const MAIN_NAV: NavItem<Route>[] = [
     title: "Experience",
     href: "/#experience",
   },
-  {
-    title: "Blog",
-    href: "/#blog",
-  },
 ]
 
 export const MOBILE_NAV: NavItem<Route>[] = [
