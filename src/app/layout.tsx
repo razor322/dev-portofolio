@@ -46,11 +46,11 @@ export const metadata: Metadata = {
   keywords: SITE_INFO.keywords,
   authors: [
     {
-      name: "ncdai",
+      name: "Gybran Nauval Yuhandika",
       url: SITE_INFO.url,
     },
   ],
-  creator: "ncdai",
+  creator: "Gybran Nauval Yuhandika",
   openGraph: {
     siteName: SITE_INFO.name,
     url: "/",
