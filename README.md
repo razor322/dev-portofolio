@@ -1,61 +1,84 @@
-# [gybrannauval.site](https://gybrannauval.site) &middot; [![GitHub License](https://img.shields.io/github/license/razor322/minimal-dev-portfolio?label=License)](https://github.com/razor322/minimal-dev-portfolio/blob/main/LICENSE)
+# [gybrannauval.site](https://gybrannauval.site)
 
-A minimal developer portfolio built with Next.js 16, Tailwind CSS v4, and TypeScript.
+Personal developer portfolio of **Gybran Nauval Yuhandika** — Software Engineer based in Padang, Indonesia.
 
-→ Live site: [gybrannauval.site](https://gybrannauval.site)
+Built with Next.js 16, Tailwind CSS v4, and TypeScript. Based on the [chanhdai.com](https://github.com/ncdai/chanhdai.com) template by [ncdai](https://github.com/ncdai).
 
-## Stack
+## Tech Stack
 
 - **Framework**: Next.js 16 (App Router)
 - **Styling**: Tailwind CSS v4
-- **UI**: shadcn/ui + shadcn registry (`@ncdai`)
+- **UI Components**: shadcn/ui
 - **Language**: TypeScript (strict mode)
-- **Analytics**: PostHog, OpenPanel
+- **Package Manager**: pnpm
 
 ## Features
 
-- Single-page portfolio with anchor-based sections
+- Single-page portfolio with smooth scroll sections
 - Light/Dark theme toggle
 - Command menu (`Cmd+K` / `Ctrl+K`)
 - SEO optimized (JSON-LD, OpenGraph, sitemap, robots.txt)
-- Spam-protected email and phone
+- Spam-protected email and phone (base64 encoded)
 - GitHub contributions chart
 - Responsive design
 - Component registry (installable via `shadcn add`)
 
 ## Sections
 
-About · Tech Stack · Experience · Education · Projects · Awards · Certifications · Organizations · Languages · Bookmarks · Insights
+Profile Header · About · Tech Stack · Experience · Education · Projects · Awards · Certifications · Organizations · Languages · Bookmarks · Insights
 
-## Development
+## Getting Started
 
 ```bash
-pnpm install         # Install dependencies
-pnpm dev             # Dev server
+# Clone the repository
+git clone https://github.com/razor322/minimal-dev-portfolio.git
+cd minimal-dev-portfolio
+
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+```
+
+## Commands
+
+```bash
+pnpm dev             # Start dev server
 pnpm build           # Production build (includes registry:build)
-pnpm lint            # ESLint
-pnpm format:write    # Prettier
+pnpm start           # Start production server
+pnpm lint            # Run ESLint
+pnpm lint:fix        # Fix ESLint errors
+pnpm format:check    # Check Prettier formatting
+pnpm format:write    # Format with Prettier
 pnpm check-types     # Type checking (run after build)
+pnpm test:run        # Run tests
 ```
 
-## Registry
+## Project Structure
 
-This project doubles as a shadcn component registry. Install components:
-
-```bash
-npx shadcn@latest add @ncdai/copy-button
-npx shadcn@latest add @ncdai/contribution-graph
-npx shadcn@latest add @ncdai/text-flip
+```
+src/
+├── app/              # Next.js App Router routes
+├── components/       # Shared UI components
+├── config/           # Site configuration
+├── features/         # Feature modules (portfolio, blog, doc)
+├── lib/              # Utility functions
+├── registry/         # shadcn component registry
+└── styles/           # Global styles
 ```
 
-Build registry:
+## Customization
 
-```bash
-pnpm registry:build
-```
+1. Edit `src/features/portfolio/data/user.ts` — your personal info, bio, skills
+2. Edit `src/config/site.ts` — site metadata, nav items, social links
+3. Replace images in `public/images/` — avatar, favicon, OG image
+4. Update `src/features/portfolio/data/` — projects, experience, education, etc.
+
+## Credits
+
+Based on the excellent [chanhdai.com](https://github.com/ncdai/chanhdai.com) portfolio template by [ncdai](https://github.com/ncdai).
 
 ## License
 
-Licensed under the [MIT license](./LICENSE).
-
-You're free to use this code. **Remove all personal information** before publishing your own site.
+This project is for personal use. Please respect the original template's license when using the codebase.
